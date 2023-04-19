@@ -4,20 +4,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class Author extends Person {
-    private List books;
+    private List<String> books;
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
         books = new ArrayList();
-    }
-
-    /**
-     * @deprecated Use publishedBooks instead
-     */
-    @Deprecated
-    public List<String> getBooks() {
-        return books;
     }
 
     public List<String> publishedBooks() {
